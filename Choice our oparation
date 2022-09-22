@@ -1,0 +1,100 @@
+//WAP to accept choice from user and perform the operation:
+//1: factorial
+//2:sum of digit
+//3:Armstrong number or not
+//4:fibonacci series
+//5:Prime no or Not
+import java.util.*;
+public class acceptchoice_f_s_a_f_p {
+public static void main(String[] args) {
+	//using scanner
+	Scanner sc= new Scanner(System.in);
+	System.out.println("enetr the number");
+	
+	System.out.println("1.factorial");
+	System.out.println("2.addition");
+	System.out.println("3.amstrong");
+	System.out.println("4.fibonachi");
+	System.out.println("5.pirme");
+	int k=sc.nextInt();
+	switch(k) {//using switch case
+	case 1:
+	int i,fact=1;
+	System.out.println("enter the factorial no: ");
+	int num=sc.nextInt();
+	for(i=1;i<=num;i++) {//using for loop
+		fact=fact*i;//this is formula
+	}
+	System.out.println("the factorial no of"+fact);
+	break;
+	
+	
+	case 2:
+		System.out.println("enter the addition no1:");
+		int n1=sc.nextInt();
+		System.out.println("enter the addtion no2:");
+		int n2=sc.nextInt();
+		System.out.println("the addition of n1 and n2:"+(n1+n2));//formula
+		break;
+		
+	case 3:
+		System.out.println("enter the no:");
+		int p=sc.nextInt();
+		int temp=p;
+		int reminder,amstrong=0;
+		while(p>0) {///loop
+			reminder=p%10;
+			amstrong=amstrong+reminder*reminder*reminder;//formula
+			p=p/10;
+		}
+		if(temp==amstrong)//condition
+		{
+			System.out.println("it is amstrong"+amstrong);
+		}
+		else
+		{
+			System.out.println("it is not amstrong"+amstrong);
+		}
+		break;
+	case 4:
+		System.out.println("enter the first two no :");
+		int m1=sc.nextInt();
+		int m2=sc.nextInt();
+        int count=10;
+        int m3;
+        int j;
+        System.out.println(m1+" "+m2);
+        for(j=2;j<count;j++) {//for loop
+        	m3=m1+m2;//formula
+        	System.out.println("the fibonachi series of given no is :"+m3);
+        	m1=m2;
+        	m2=m3;
+        }
+     break;
+
+	 case 5:
+		 System.out.println("enetr the number");
+		 int num1,m, sum=0;
+	      num = sc.nextInt();
+	      //for loop
+	      for(i=2; i<num; i++)
+	      {
+	    	 //if condition
+	         if(num%i == 0)
+	         {
+	            sum++;
+	            break;
+	         }
+	      }
+	      //if else to print if prime or not
+	      if(sum==0)
+	         System.out.println(+num+" is a Prime Number");
+	      else
+	         System.out.println(+num+" is not a Prime Number");
+         sc.close();
+         break;
+	default:
+		System.out.println("enetr the valid number");
+	}
+}
+}
