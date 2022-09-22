@@ -1,0 +1,106 @@
+//Create a menu for food counter
+ //and accept the items from user 
+//and display the final Bill amount
+ //with the item is ordered
+import java.util.*;
+public class dowhileloop {//using loop
+	public static void main(String[] args) {
+		int menu_item,menu1,i_price=0;
+		char ans;
+		String i_name="";
+		Scanner sc=new Scanner(System.in);
+		do 
+		{
+			
+			System.out.println("menu:\n1:veg\n2: non veg \n3:deserts");//menu name
+			menu_item =sc.nextInt();
+			switch(menu_item)//using switch case
+			{
+			case 1:
+				System.out.println("1:palak paneer1\t\t 120rs.");//item and price are veg
+				System.out.println("2:Aloo gobi2\t\t 80rs.");
+				System.out.println("3:Dal makhani3\t\t 99rs.");
+				menu1=sc.nextInt();
+				switch(menu1)
+				{
+				case 1:
+					i_price+=199;
+					i_name+="\npalak paneer";
+					break;
+					
+				case 2:
+					i_price+=80;
+					i_name+="\nAloo gobi";
+					break;
+					
+				case 3:
+					i_price+=99;
+					i_name+="\nDal makhani";
+					break;
+				
+				default:
+					System.out.println("invalid choice");
+			}
+			case 2:
+				System.out.println("1:chilli mutton1\t\t 299rs.");//item and price are non veg 
+				System.out.println("2:masala fried fish2\t\t 150rs.");
+				System.out.println("3:chicken manchurian3\t\t 99rs.");
+				menu1=sc.nextInt();
+				switch(menu1)
+				{
+				case 1:
+					i_price+=299;
+					i_name+="\nchilli mutton";
+					break;
+					
+				case 2:
+					i_price+=150;
+					i_name+="\nmasala fried fish";
+					break;
+					
+				case 3:
+					i_price+=99;
+					i_name+="\nchicken manchurian";
+					break;
+				
+				default:
+					System.out.println("invalid choice");
+				}
+			case 3:
+				System.out.println("1:ice-cream1\t\t 39rs.");//item and price are deserts
+				System.out.println("2:gulab jamun2\t\t 50rs.");
+				System.out.println("3:mithai3\t\t 40rs.");
+				menu1=sc.nextInt();
+				switch(menu1)
+				{
+				case 1:
+					i_price+=39;
+					i_name+="\nice-cream";
+					break;
+					
+				case 2:
+					i_price+=50;
+					i_name+="\ngulab jamun";
+					break;
+					
+				case 3:
+					i_price+=40;
+					i_name+="\nmithai";
+					break;
+				
+				default:
+					System.out.println("invalid choice");
+				}
+				break;
+			}
+			System.out.println("do you want to add another item y/n");
+			ans=sc.next().charAt(0);
+		}
+		
+		while(ans=='Y'||ans=='y');
+		System.out.println("thanks for coming");
+		System.out.println("the food item are:\n"+i_name);
+		System.out.println("the total bill is:"+i_price);// total Bill 
+		
+		}
+	}
