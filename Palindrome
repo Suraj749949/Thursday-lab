@@ -1,0 +1,22 @@
+import java.util.*;
+public class Demo {
+	public static void main(String[] args) {
+		//take input from the user
+		//create a scanner class
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enetr the number:");
+		String reverse="";
+		String num=sc.nextLine();
+		int length=num.length();
+                //Using a for loop
+		for(int i=length-1;i>=0;i--) 
+			reverse=reverse+num.charAt(i);
+			if(num.equals(reverse)) 
+				System.out.println("enetr the num"+num+"is palindrome." );
+			else 
+				System.out.println("enetr the num"+num+"is not palindrome." );
+	
+			}
+		
+		
+	}
