@@ -1,0 +1,26 @@
+import java.util.*;
+public class evenoddnum {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int add=0;
+		int sum=0;
+		System.out.println("enetr the first num:");
+		int a=sc.nextInt();
+		System.out.println("enetr the second num:");
+		int b=sc.nextInt();
+		for(int i=a;i<=b;i++) {
+			if(i%2==0) {
+				sum=sum+i;
+				System.out.println("it is even num"+i);
+				
+			}
+			else {
+				add=add+i;
+				System.out.println("it is odd num"+i);
+			}
+		
+	}
+		System.out.println("the addition of number "+sum);
+		System.out.println("the sum of number"+add);
+	}
+}
