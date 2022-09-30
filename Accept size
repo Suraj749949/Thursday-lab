@@ -1,0 +1,54 @@
+import java.util.*;
+public class accept size 
+{
+	public static void main(String[] args)
+	{
+		
+		int i, n, x;
+                 int temp = 1;
+                 int loc = 0; 
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of elements in array : "); 
+		n = sc.nextInt();
+		int arr[] = new int[n];
+		System.out.println("Input the array elements : "); 
+		for (i = 0; i < n; i++)
+		{
+			
+			arr[i] = sc.nextInt();
+
+		}	
+		System.out.print("\nEnter the element you want to delete:"); 
+		x = sc.nextInt();
+		for (i = 0; i < n; i++)
+		{      
+			if (arr[i] == x) 
+			{      
+				temp = 1;
+				loc = i;
+				break;
+			} 
+			else 
+			{
+				temp = 0;
+			}
+		}
+		if (temp == 1)
+		{          
+			for (i = loc + 1; i < n; i++)
+			{
+				arr[i - 1] = arr[i];       
+			}
+			System.out.println("After Deleting:");
+			for (i = 0; i < n - 2; i++) 
+			{
+				System.out.print(arr[i] + ",");
+			}
+			System.out.print(arr[n - 2]);
+		} 
+		else 
+		{
+			System.out.println("Element not found");
+		}
+	}
+}
